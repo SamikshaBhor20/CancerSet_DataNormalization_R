@@ -13,7 +13,7 @@ logcpm=log2(cpmatrix+1)
 mat=readRDS('log2cpm_matrix.rds')
 
 summary(logcpm)
-
+saveRDS(logcpm, file='logcpm.rds')
 #Calculate a z score
 library(matrixStats)
 z_score = (logcpm - rowMeans(logcpm))/rowSds(as.matrix(logcpm))[row(logcpm)]
