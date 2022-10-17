@@ -17,3 +17,5 @@ summary(logcpm)
 #Calculate a z score
 library(matrixStats)
 z_score = (logcpm - rowMeans(logcpm))/rowSds(as.matrix(logcpm))[row(logcpm)]
+
+
